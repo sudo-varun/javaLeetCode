@@ -43,5 +43,5 @@ public class CoinChange {
             dp[currAmount] = Integer.MAX_VALUE;
         }
         return dp[currAmount];
-    }}
+    }
 }
