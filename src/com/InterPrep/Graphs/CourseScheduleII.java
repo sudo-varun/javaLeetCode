@@ -1,4 +1,4 @@
-package com.InterPrep;
+package com.InterPrep.Graphs;
 
 import java.util.*;
 

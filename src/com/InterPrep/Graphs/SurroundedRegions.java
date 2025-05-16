@@ -1,6 +1,4 @@
-package com.InterPrep;
-
-import java.util.Arrays;
+package com.InterPrep.Graphs;
 
 public class SurroundedRegions {
     public void solve(char[][] board) {
