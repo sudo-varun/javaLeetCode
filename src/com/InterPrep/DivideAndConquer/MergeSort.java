@@ -14,24 +14,27 @@ public class MergeSort {
         if(left >= right) {
             return;
         }
-        int mid = left +(right - left) / 2;
+        int mid = (left + right) / 2;
         divide(nums, left, mid, temp);
         divide(nums, mid+1, right, temp);
         merge(nums, left, mid, right, temp);
     }
     private void merge(int[] nums, int left, int mid, int right, int[] temp) {
-        for (int i = left; i <= right; i++) {
+        for(int i = left; i <= right; i++) {
             temp[i] = nums[i];
         }
-        int i = left;       // Start of left subarray
-        int j = mid + 1;    // Start of right subarray
-        int k = left;       // Current position to fill in nums
-
+        int i = left;
+        int j = mid + 1;
+        int k = left;
         while (i <= mid && j <= right) {
-            if (temp[i] <= temp[j]) {
-                nums[k++] = temp[i++];
+            if(temp[i] <= temp[j]) {
+                nums[k] = temp[i];
+                k++;
+                i++;
             } else {
-                nums[k++] = temp[j++];
+                nums[k] = temp[j];
+                k++;
+                j++;
             }
         }
         while(i <= mid) {

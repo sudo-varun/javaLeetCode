@@ -14,12 +14,13 @@ public class CombinationSum {
             res.add(new ArrayList<>(curr));
             return;
         }
-        for (int i = idx; i < candidates.length; i++) {
+        for(int i = idx; i < candidates.length; i++) {
+            int currInt = candidates[i];
             if(currTarget < candidates[i]) {
                 continue;
             }
-            curr.add(candidates[i]);
-            backtrack(curr, i, currTarget - candidates[i], candidates);
+            curr.add(i);
+            backtrack(curr, i, currTarget - currInt, candidates);
             curr.removeLast();
         }
     }

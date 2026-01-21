@@ -19,7 +19,6 @@ public class StringToInteger {
         if(hasPositiveChar) {
             s = s.substring(1);
         }
-        int sign = isNegative ? -1 : 1;
         Map<Character, Integer> digits = new HashMap<>();
         int i = 0;
         for(char d = '0'; d <= '9'; d++) digits.put(d, i++);

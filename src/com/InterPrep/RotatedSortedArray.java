@@ -26,6 +26,10 @@ public class RotatedSortedArray {
         }
         return -1;
     }
+    public boolean searchII(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        return false;
+    }
     /*
     Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
 

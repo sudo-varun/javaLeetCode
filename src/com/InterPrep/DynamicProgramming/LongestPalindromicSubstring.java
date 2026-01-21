@@ -21,14 +21,14 @@ Output: "bb"
  */
 
 public class LongestPalindromicSubstring {
-    public String longestPalindrome(String s) {
-        return s;
-    }
-    public static void main(String[] args) {
-        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
-        String s1 = "babad";
-        String s2 = "cbbd";
-        System.out.println(lps.longestPalindrome(s1)); // Output: "bab" or "aba"
-        System.out.println(lps.longestPalindrome(s2)); // Output: "bb"
-    }
+//    public String longestPalindrome(String s) {
+//
+//    }
+//    public static void main(String[] args) {
+//        LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
+//        String s1 = "babad";
+//        String s2 = "cbbd";
+//        System.out.println(lps.longestPalindrome(s1)); // Output: "bab" or "aba"
+//        System.out.println(lps.longestPalindrome(s2)); // Output: "bb"
+//    }
 }
