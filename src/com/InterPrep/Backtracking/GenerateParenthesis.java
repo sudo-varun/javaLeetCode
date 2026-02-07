@@ -8,24 +8,26 @@ import java.util.Set;
 
 public class GenerateParenthesis {
     public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList<>();
-        backtrack(result, new StringBuilder(), n, 0);
-        return result;
+        List<String> ans = new ArrayList<>();
+        backtrack(new StringBuilder(), n, n, n, ans);
+        return ans;
     }
-    private void backtrack(List<String> result, StringBuilder curr, int n, int stack) {
-        if(n < 0 || stack < 0) {
+    public void backtrack(StringBuilder curr, int target, int forward, int backward, List<String> ans) {
+        if(curr.length() == target * 2) {
+            ans.add(curr.toString());
             return;
         }
-        if(n == 0 && stack == 0) {
-            result.add(curr.toString());
+        if(forward > 0) {
+            curr.append("(");
+            backtrack(curr, target, forward - 1, backward, ans);
+            curr.deleteCharAt(curr.length() - 1);
         }
-        curr = curr.append("(");
-        backtrack(result, curr, n - 1, stack + 1);
-        curr.deleteCharAt(curr.length() - 1);
+        if(forward < backward) {
 
-        curr = curr.append(")");
-        backtrack(result, curr, n, stack - 1);
-        curr.deleteCharAt(curr.length() - 1);
+            curr.append(")");
+            backtrack(curr, target, forward, backward - 1, ans);
+            curr.deleteCharAt(curr.length() - 1);
+        }
     }
     public static void main(String[] args) {
         GenerateParenthesis generateParenthesis = new GenerateParenthesis();

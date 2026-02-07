@@ -1,0 +1,2 @@
+## Contains problems that use concepts from maths or number theory. 
+These problems may require a deeper understanding of mathematical concepts and may involve more complex calculations. They are designed to challenge your problem-solving skills and help you develop a stronger foundation in number theory.
