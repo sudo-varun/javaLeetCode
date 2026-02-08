@@ -9,7 +9,7 @@ public class SurroundedRegions {
             dfs(board, i, 0);
             dfs(board, i, board[0].length - 1);
         }
-        for(int j = 0; j < board.length; j++) {
+        for(int j = 0; j < board[0].length; j++) {
             dfs(board, 0, j);
             dfs(board, board.length - 1, j);
         }
