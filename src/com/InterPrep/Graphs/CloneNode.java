@@ -12,12 +12,12 @@ public class CloneNode {
         }
         return depthFirst(node, new HashMap<>());
     }
-    private GraphNode depthFirst(GraphNode node, Map<GraphNode, GraphNode> oldToNew) {
+    public GraphNode depthFirst(GraphNode node, Map<GraphNode, GraphNode> oldToNew) {
         if(oldToNew.containsKey(node)) {
-           return oldToNew.get(node);
+            return oldToNew.get(node);
         }
         GraphNode newNode = new GraphNode(node.val);
-        oldToNew.putIfAbsent(node, newNode);
+        oldToNew.put(node, newNode);
         for(GraphNode neighbour: node.neighbors) {
             newNode.neighbors.add(depthFirst(neighbour, oldToNew));
         }
